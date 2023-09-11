@@ -2,6 +2,7 @@ package com.app.demo.data.articles.model
 
 data class ArticleDetails(val title:String,
                                val description: String,
+                               val author: String,
                                val image: String,
                                val region: String,
                                val publishedDate: String,

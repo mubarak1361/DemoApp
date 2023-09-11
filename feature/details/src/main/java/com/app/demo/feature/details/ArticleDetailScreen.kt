@@ -94,10 +94,12 @@ fun ArticleDetails(articleDetailsModel: ArticleDetailsModel,readMoreClick:(Strin
             )
             Spacer(modifier = Modifier.height(4.dp))
             Text(text = imageCaption, color = Color.Gray,fontWeight = FontWeight.Normal, fontSize = 12.sp,lineHeight = 16.sp)
-            Spacer(modifier = Modifier.height(4.dp))
+            Spacer(modifier = Modifier.height(12.dp))
+            Text(text = "Region: $region",color = Color.Black,fontWeight = FontWeight.Bold, fontSize = 14.sp)
+            Spacer(modifier = Modifier.height(6.dp))
             Text(text = description,color = Color.Black,fontWeight = FontWeight.Normal, fontSize = 16.sp)
             Spacer(modifier = Modifier.height(16.dp))
-            Text(text = "Region: $region",color = Color.Gray,fontWeight = FontWeight.Normal, fontSize = 14.sp)
+            Text(text = author,color = Color.Gray,fontWeight = FontWeight.Normal, fontSize = 14.sp)
             Text(text = "Published on $publishedDate",color = Color.Gray,fontWeight = FontWeight.Normal, fontSize = 14.sp)
             Column(verticalArrangement = Arrangement.Bottom,
                 modifier = Modifier.fillMaxSize()) {

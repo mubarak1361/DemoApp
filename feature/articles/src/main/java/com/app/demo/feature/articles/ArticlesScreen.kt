@@ -102,6 +102,10 @@ fun ArticleCard(article: ArticleModel,onItemClick:(Int) -> Unit) {
                         Text(text = publishedDate, fontSize = 12.sp)
                         Spacer(modifier = Modifier.height(3.dp))
                         Text(text = title, color = Color.Black, fontWeight = FontWeight.Bold)
+                        Spacer(modifier = Modifier.height(6.dp))
+                        Box(modifier = Modifier.align(alignment = Alignment.End)) {
+                            Text(text = author, color = Color.Black, fontSize = 12.sp)
+                        }
 
                     }
                 }

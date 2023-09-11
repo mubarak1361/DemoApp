@@ -9,6 +9,7 @@ fun Article.transformArticleModel(formattedPublishedDate: String): ArticleModel 
     return ArticleModel(
         id = id,
         title = title,
+        author = author,
         image = image,
         publishedDate = formattedPublishedDate
     )
@@ -18,6 +19,7 @@ fun ArticleDetails.transformArticleDetailsModel(formattedPublishedDate: String):
     return ArticleDetailsModel(
         title = title,
         description = description,
+        author = author,
         image = image,
         region = region,
         publishedDate = formattedPublishedDate,

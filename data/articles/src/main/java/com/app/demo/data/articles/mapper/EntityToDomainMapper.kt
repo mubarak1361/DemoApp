@@ -8,8 +8,7 @@ fun ArticleEntity.transformArticle(): Article {
     return Article(
         id = id,
         title = title,
-        description = description,
-        type = type,
+        author = byline,
         image = image,
         publishedDate = publishedDate
     )
@@ -19,6 +18,7 @@ fun ArticleEntity.transformArticleDetails(): ArticleDetails {
     return ArticleDetails(
         title = title,
         description = description,
+        author = byline,
         image = image,
         region = region,
         publishedDate = publishedDate,
