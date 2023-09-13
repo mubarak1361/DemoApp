@@ -20,7 +20,7 @@ data class RemoteArticle(
     val kicker: String,
     @SerialName("material_type_facet")
     val materialTypeFacet: String,
-    val multimedia: List<RemoteMultimedia>,
+    val multimedia: List<RemoteMultimedia>?,
     @SerialName("org_facet")
     val orgFacet: List<String>,
     @SerialName("per_facet")

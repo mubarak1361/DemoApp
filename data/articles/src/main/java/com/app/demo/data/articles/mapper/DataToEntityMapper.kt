@@ -4,15 +4,15 @@ import com.app.demo.core.local.model.ArticleEntity
 import com.app.demo.core.remote.model.RemoteArticle
 
 private fun RemoteArticle.transformArticleEntity(): ArticleEntity {
-    val media = multimedia.first { it.format == "Super Jumbo" }
+    val media = multimedia?.first { it.format == "Super Jumbo" }
     return ArticleEntity(
         title = title,
         description = description,
         type = itemType,
-        image = media.url,
+        image = media?.url ?: "",
         publishedDate = publishedDate,
-        imageCopyright = media.copyright,
-        imageCaption = media.caption,
+        imageCopyright = media?.copyright ?: "",
+        imageCaption = media?.caption ?: "",
         readMoreLink = url,
         createdDate = createdDate,
         updatedDate = updatedDate,

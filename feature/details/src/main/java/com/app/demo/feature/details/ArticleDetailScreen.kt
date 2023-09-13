@@ -20,6 +20,7 @@ import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.material3.TopAppBar
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
@@ -38,7 +39,9 @@ import java.nio.charset.StandardCharsets
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun ArticleDetailScreen(articleId: Int,readMoreClick:(String)-> Unit, onBackPressed: () -> Unit, viewModel: ArticleDetailViewModel = hiltViewModel()) {
-    viewModel.getArticleDetailsById(articleId)
+    LaunchedEffect(Unit){
+        viewModel.getArticleDetailsById(articleId)
+    }
     val uiState = viewModel.uiState.collectAsStateWithLifecycle().value
     Scaffold(topBar = {
         Surface(shadowElevation = 3.dp) {
