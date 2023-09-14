@@ -34,14 +34,3 @@ class ArticleDetailViewModel @Inject constructor(private val getArticleDetailUse
     }
 }
 
-sealed interface ArticleDetailsUiState {
-    data class Data(
-        val articleDetails: ArticleDetailsModel
-    ) : ArticleDetailsUiState
-
-    data class Error(
-        val errorMessage: String
-    ) : ArticleDetailsUiState
-
-    object Loading : ArticleDetailsUiState
-}
